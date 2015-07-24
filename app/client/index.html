@@ -1,0 +1,44 @@
+<!doctype html>
+<html ng-app="resultsApp">
+    <head>
+        <link rel="stylesheet" type="text/css" href="scripts/bootstrap/bootstrap.min.css">
+        <title>Football Results</title>
+    </head>
+    <body>
+        <div ng-controller="ResultsController">
+            <nav class="navbar navbar-default">
+              <div class="container-fluid">
+                <div class="navbar-header">
+                  <a class="navbar-brand" href="#">
+                    <img alt="Brand" src="...">
+                  </a>
+                </div>
+              </div>
+            </nav>
+
+        <div id="main">
+            <div ng-view></div>
+        </div>
+        <meta charset="utf-8"/>
+
+
+        <script src="scripts/bower_components/angular/angular.js"></script>
+        <script src="scripts/angular-route.js"></script>
+            <script src="scripts/angular-resource.js"></script>
+        <script src="scripts/jquery.min.js"></script>
+        <script src="scripts/angular-dragdrop.min.js"></script>
+        <script src="scripts/jquery-ui/jquery-ui.min.js"></script>
+
+        <script src="scripts/bower_components/d3/d3.js"></script>
+        <script src="scripts/bower_components/nvd3/nv.d3.js"></script>
+        <script src="scripts/bower_components/angular-nvd3/dist/angular-nvd3.js"></script>
+        <link rel="stylesheet" href="scripts/bower_components/nvd3/nv.d3.css"/>
+        
+        <script src="app/app.js"></script>
+        <script src="app/results/ResultsController.js"></script>
+            <script src="app/services/results.service.js"></script>
+            <script src="app/resources/results.resource.js"></script>
+        <script src="app/controllers/ChartController.js"></script>
+    </div>
+    </body>
+</html>

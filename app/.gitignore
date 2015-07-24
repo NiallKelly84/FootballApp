@@ -1,0 +1,12 @@
+### Java template
+*.class
+*.jar
+*.war
+*.ear
+
+### JetBrains template
+*.iml
+.idea/
+/out/
+target/
+target/target/

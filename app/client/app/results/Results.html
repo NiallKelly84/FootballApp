@@ -1,0 +1,35 @@
+<div ng-controller="ResultsController">
+  <div>
+      <div class="btn btn-primary" data-drag="true" data-jqyoui-options="{revert: 'invalid'}" ng-model="list1" jqyoui-draggable="{animate:true}" ng-hide="!list1.title">{{list1.title}}</div>
+  </div>
+      <div class="thumbnail" data-drop="true" data-jqyoui-options ng-model="list2" jqyoui-droppable style='height:50px;'>
+        <div class="btn btn-success" data-drag="false" data-jqyoui-options ng-model="list2" jqyoui-draggable ng-hide="!list2.title"
+        >{{list2.title}}</div>
+      </div>
+       <div>
+            Team A<input type="text" ng-model="teams.teamA"/>
+            Team B<input type="text" ng-model="teams.teamB"/>
+            <button ng-click="searchByTeams()">Find Results</button>
+        </div>
+          <table class="table">
+            <tr>
+              <th>Date</th>
+              <th>Team 1</th>
+              <th>Team 2</th>
+              <th>Full Time</th>
+              <th>Half Time</th>
+            </tr>
+            <tr ng-repeat="res in premResults | filter:teamA | filter:teamB">
+              <td>{{ res.Date }}</td>
+              <th>{{ res.TeamA }}</th>
+              <th>{{ res.TeamB }}</th>
+              <th>{{ res.FT }}</th>
+              <th>{{ res.HT }}</th>
+            </tr>
+          </table>
+        </div>
+  </div>
+</div>
+<div ng-controller='ChartController'>
+    <nvd3 options="options" data="data"></nvd3>
+</div>
